@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="/jscript.js" defer></script>
+    <script src="./jscript.js" defer></script>
 </head>
 <body>
+    <h1>Lets Play a Game of Rock, Paper, Sissors!</h1>
     <div id ="choiceSelectionDiv">
         <button id="Rock">Rock</button>
         <button id="Paper">Paper</button>
         <button id="Scissors">Scissors</button>
     </div>
+    <div>
+        <p>Player Selection:<img></p>
+        <p>Computer Selection:<img></p>
+    </div>
     <div id="resultsDiv">
-        <p>Player Score: <span id="playerScore"></span></p>
-        <p>Computer Score: <span id="computerScore"></span></p>
+        <p>Player Score: <span id="playerScore">0</span></p>
+        <p>Computer Score: <span id="computerScore">0</span></p>
+        <p>Round: <span id="roundValue">0</span></p>
+    </div>
     </div>
 </body>
 </html>
