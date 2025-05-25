@@ -120,8 +120,29 @@ let arr = [ john, pete, mary ];
 
 
 function getAverageAge(arr){
-    let age =arr.reduce((sum, current)=> 1+1);
+    let ageObject = arr.reduce((accumulator, currentObj)=> {
+        accumulator.age += currentObj.age;
+        accumulator.count += 1; 
+        return accumulator;
+    },
+    {age: 0, count: 0});
+
+    return ageObject.age/ageObject.count;
+};
+console.log( getAverageAge(arr) );
+
+let users = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+function groupById(arr){
+    return arr.reduce((accumulator,currentVale) => {
+        accumulator[currentVale.id] = currentVale;
+        return accumulator;
+    },{});
 };
 
-alert( getAverageAge(arr) );
-
+let usersById = groupById(users);
+console.log(usersById);
